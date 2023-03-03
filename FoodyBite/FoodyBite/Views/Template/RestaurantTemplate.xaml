@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Grid
+    x:Class="FoodyBite.Views.Template.RestaurantTemplate"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xtc="http://xamarin.com/schemas/2020/toolkit"
+    Padding="-10,0,0,0"
+    HeightRequest="350">
+    <Frame
+        Margin="20,5"
+        Padding="0"
+        BackgroundColor="White"
+        BorderColor="White"
+        CornerRadius="10"
+        HasShadow="True"
+        HorizontalOptions="FillAndExpand"
+        WidthRequest="400">
+        <Grid Padding="0" RowDefinitions="3*,1*">
+            <Grid Margin="0" Padding="0">
+
+                <Image
+                    Margin="0"
+                    Aspect="AspectFill"
+                    HorizontalOptions="FillAndExpand"
+                    Source="{Binding .}"
+                    VerticalOptions="FillAndExpand" />
+                <Frame
+                    Margin="15"
+                    Padding="0"
+                    BackgroundColor="White"
+                    CornerRadius="5"
+                    HeightRequest="30"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    WidthRequest="80">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="14"
+                        HorizontalTextAlignment="Center"
+                        Text="OPEN"
+                        TextColor="Green"
+                        VerticalTextAlignment="Center" />
+                </Frame>
+                <Frame
+                    Margin="15"
+                    Padding="0"
+                    BackgroundColor="White"
+                    CornerRadius="5"
+                    HeightRequest="30"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    WidthRequest="80">
+                    <FlexLayout Padding="5" JustifyContent="Center">
+                        <Image
+                            Margin="5,-3"
+                            Aspect="AspectFit"
+                            HeightRequest="25"
+                            Source="Star_Icon"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="20" />
+                        <Label
+                            FlexLayout.AlignSelf="Center"
+                            FlexLayout.Grow="1"
+                            FontAttributes="Bold"
+                            FontSize="12"
+                            HorizontalTextAlignment="Center"
+                            Text="4.4"
+                            TextColor="Green"
+                            VerticalTextAlignment="Center" />
+                    </FlexLayout>
+                </Frame>
+            </Grid>
+            <Grid Grid.Row="1" RowDefinitions="auto,auto ">
+                <Grid
+                    Padding="20,5"
+                    ColumnDefinitions="auto,auto,*"
+                    RowDefinitions="auto,auto">
+                    <Label
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        Text="Happy Bones"
+                        TextColor="#3E3F68" />
+                    <StackLayout
+                        Grid.Column="1"
+                        Margin="10,0"
+                        Orientation="Horizontal"
+                        Spacing="5">
+                        <Frame
+                            Padding="10,0"
+                            BackgroundColor="#FF5673"
+                            CornerRadius="15"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                            <Label
+                                FontAttributes="Italic"
+                                FontSize="10"
+                                HorizontalTextAlignment="Center"
+                                Text="Italian"
+                                TextColor="White"
+                                VerticalTextAlignment="Center" />
+                        </Frame>
+                        <Frame
+                            Grid.Column="1"
+                            Padding="10,0"
+                            BackgroundColor="#848DFF"
+                            CornerRadius="15"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand">
+                            <Label
+                                FontAttributes="Italic"
+                                FontSize="10"
+                                HorizontalTextAlignment="Center"
+                                Text="1.2 km"
+                                TextColor="White"
+                                VerticalTextAlignment="Center" />
+                        </Frame>
+                    </StackLayout>
+                    <Grid
+                        Grid.Column="2"
+                        Padding="0"
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="CenterAndExpand">
+                        <Frame
+                            Padding="0"
+                            BorderColor="White"
+                            CornerRadius="1000"
+                            HeightRequest="30"
+                            IsClippedToBounds="False"
+                            TranslationX="-30"
+                            WidthRequest="30">
+                            <Image
+                                Margin="1"
+                                xtc:CornerRadiusEffect.CornerRadius="1000"
+                                Aspect="AspectFill"
+                                Source="Login_img" />
+                        </Frame>
+                        <Frame
+                            Padding="0"
+                            BackgroundColor="White"
+                            CornerRadius="1000"
+                            HeightRequest="30"
+                            IsClippedToBounds="False"
+                            TranslationX="-10"
+                            WidthRequest="30">
+                            <Image
+                                Margin="1"
+                                xtc:CornerRadiusEffect.CornerRadius="1000"
+                                Aspect="AspectFill"
+                                Source="Login_img" />
+                        </Frame>
+                        <Frame
+                            Padding="0"
+                            CornerRadius="1000"
+                            HeightRequest="30"
+                            IsClippedToBounds="False"
+                            TranslationX="10"
+                            WidthRequest="30">
+                            <Image
+                                Margin="1"
+                                xtc:CornerRadiusEffect.CornerRadius="1000"
+                                Aspect="AspectFill"
+                                Source="Login_img" />
+                        </Frame>
+                    </Grid>
+                    <Label
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        FontSize="11"
+                        Text="394 Broome St, New York, NY 10013, USA" />
+                </Grid>
+            </Grid>
+        </Grid>
+    </Frame>
+
+</Grid>

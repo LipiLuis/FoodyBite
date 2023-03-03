@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="FoodyBite.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:template="clr-namespace:FoodyBite.Views.Template"
+    xmlns:xtc="http://xamarin.com/schemas/2020/toolkit"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+    <Grid IsClippedToBounds="False" RowDefinitions="100,auto,*">
+        <Frame>
+            <Grid
+                Padding="20"
+                BackgroundColor="IndianRed"
+                ColumnDefinitions="auto,*,auto"
+                ColumnSpacing="40"
+                HeightRequest="60"
+                HorizontalOptions="FillAndExpand"
+                IsClippedToBounds="False">
+                <ImageButton
+                    BackgroundColor="Transparent"
+                    CornerRadius="15"
+                    HeightRequest="35"
+                    HorizontalOptions="StartAndExpand"
+                    Source="Filter_Icon"
+                    VerticalOptions="StartAndExpand"
+                    WidthRequest="35" />
+                <Frame
+                    Grid.Column="1"
+                    Margin="1"
+                    Padding="0"
+                    BackgroundColor="Transparent"
+                    BorderColor="White"
+                    CornerRadius="8"
+                    HeightRequest="45"
+                    VerticalOptions="EndAndExpand">
+                    <Grid ColumnDefinitions="1*,4*">
+                        <Image
+                            x:Name="sourceImage"
+                            Aspect="AspectFill"
+                            HeightRequest="22"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="Search_Icon"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="22" />
+                        <Entry
+                            Grid.Column="1"
+                            Margin="-10,5"
+                            FontSize="17"
+                            HeightRequest="70"
+                            Placeholder="Pesquisar"
+                            PlaceholderColor="Gray"
+                            TextColor="Gray" />
+                    </Grid>
+                </Frame>
+                <ImageButton
+                    Grid.Column="2"
+                    BackgroundColor="Transparent"
+                    CornerRadius="15"
+                    HeightRequest="35"
+                    HorizontalOptions="EndAndExpand"
+                    Source="usuario_Img"
+                    VerticalOptions="StartAndExpand"
+                    WidthRequest="35" />
+            </Grid>
+        </Frame>
+        <Frame Grid.Row="1" BackgroundColor="DarkBlue">
+            <StackLayout
+                Margin="50"
+                Spacing="25"
+                VerticalOptions="CenterAndExpand">
+                <StackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="25"
+                    VerticalOptions="CenterAndExpand">
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="#2196F3"
+                        CornerRadius="8"
+                        HeightRequest="110"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="143">
+                        <Grid
+                            Padding="5"
+                            ColumnDefinitions="1*,2*"
+                            RowDefinitions="1*,1*">
+                            <ImageButton
+                                BackgroundColor="Transparent"
+                                HeightRequest="30"
+                                HorizontalOptions="EndAndExpand"
+                                Source="Email_Img"
+                                TranslationX="4"
+                                TranslationY="4"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="30" />
+                            <Label
+                                Grid.Column="1"
+                                FontSize="27"
+                                HorizontalTextAlignment="Center"
+                                Text="5"
+                                TextColor="White"
+                                TranslationX="2"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                HorizontalOptions="Center"
+                                HorizontalTextAlignment="Start">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span
+                                            FontSize="11"
+                                            Text="Visita realizadas"
+                                            TextColor="White" />
+                                        <Span Text="&#10;" />
+                                        <Span FontSize="6" Text="Em andamento" />
+
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                    </Frame>
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="#2196F3"
+                        CornerRadius="8"
+                        HeightRequest="110"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="143">
+                        <Grid
+                            Padding="5"
+                            ColumnDefinitions="1*,2*"
+                            RowDefinitions="1*,1*">
+                            <ImageButton
+                                BackgroundColor="Transparent"
+                                HeightRequest="30"
+                                HorizontalOptions="EndAndExpand"
+                                Source="Email_Img"
+                                TranslationX="4"
+                                TranslationY="4"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="30" />
+                            <Label
+                                Grid.Column="1"
+                                FontSize="27"
+                                HorizontalTextAlignment="Center"
+                                Text="5"
+                                TextColor="White"
+                                TranslationX="2"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                HorizontalOptions="Center"
+                                HorizontalTextAlignment="Start">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span
+                                            FontSize="11"
+                                            Text="Visita realizadas"
+                                            TextColor="White" />
+                                        <Span Text="&#10;" />
+                                        <Span FontSize="6" Text="Em andamento" />
+
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+                <StackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    Orientation="Horizontal"
+                    Spacing="25"
+                    VerticalOptions="CenterAndExpand">
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="#2196F3"
+                        CornerRadius="8"
+                        HeightRequest="110"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="143">
+                        <Grid
+                            Padding="5"
+                            ColumnDefinitions="1*,2*"
+                            RowDefinitions="1*,1*">
+                            <ImageButton
+                                BackgroundColor="Transparent"
+                                HeightRequest="30"
+                                HorizontalOptions="EndAndExpand"
+                                Source="Email_Img"
+                                TranslationX="4"
+                                TranslationY="4"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="30" />
+                            <Label
+                                Grid.Column="1"
+                                FontSize="27"
+                                HorizontalTextAlignment="Center"
+                                Text="5"
+                                TextColor="White"
+                                TranslationX="2"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                HorizontalOptions="Center"
+                                HorizontalTextAlignment="Start">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span
+                                            FontSize="11"
+                                            Text="Visita realizadas"
+                                            TextColor="White" />
+                                        <Span Text="&#10;" />
+                                        <Span FontSize="6" Text="Em andamento" />
+
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                    </Frame>
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="#2196F3"
+                        CornerRadius="8"
+                        HeightRequest="110"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        WidthRequest="143">
+                        <Grid
+                            Padding="5"
+                            ColumnDefinitions="1*,2*"
+                            RowDefinitions="1*,1*">
+                            <ImageButton
+                                BackgroundColor="Transparent"
+                                HeightRequest="30"
+                                HorizontalOptions="EndAndExpand"
+                                Source="Email_Img"
+                                TranslationX="4"
+                                TranslationY="4"
+                                VerticalOptions="CenterAndExpand"
+                                WidthRequest="30" />
+                            <Label
+                                Grid.Column="1"
+                                FontSize="27"
+                                HorizontalTextAlignment="Center"
+                                Text="5"
+                                TextColor="White"
+                                TranslationX="2"
+                                VerticalTextAlignment="Center" />
+                            <Label
+                                Grid.Row="1"
+                                Grid.ColumnSpan="2"
+                                HorizontalOptions="Center"
+                                HorizontalTextAlignment="Start">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span
+                                            FontSize="11"
+                                            Text="Visita realizadas"
+                                            TextColor="White" />
+                                        <Span Text="&#10;" />
+                                        <Span FontSize="6" Text="Em andamento" />
+
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+
+    </Grid>
+
+</ContentPage>
+
+
+<!--<Grid RowDefinitions="140,60,330,60,150,60,90" RowSpacing="10">
+    <Frame
+                    Margin="10,60,20,0"
+                    BackgroundColor="Transparent"
+                    BorderColor="WhiteSmoke"
+                    CornerRadius="10">
+        <FlexLayout JustifyContent="SpaceEvenly">
+            <ImageButton
+                            Aspect="AspectFit"
+                            BackgroundColor="Transparent"
+                            FlexLayout.AlignSelf="Center"
+                            FlexLayout.Grow="0"
+                            HeightRequest="30"
+                            HorizontalOptions="CenterAndExpand"
+                            Source="Search_Icon"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="30" />
+            <Label
+                            Grid.Column="1"
+                            Margin="25,0"
+                            FlexLayout.Grow="1"
+                            FontSize="18"
+                            HorizontalTextAlignment="Start"
+                            Text="Find Restaurants"
+                            TextColor="#6E7FAA"
+                            VerticalTextAlignment="Center" />
+            <ImageButton
+                            Grid.Column="2"
+                            Aspect="AspectFit"
+                            BackgroundColor="Transparent"
+                            FlexLayout.AlignSelf="Center"
+                            HeightRequest="30"
+                            Source="Filter_Icon"
+                            WidthRequest="30" />
+        </FlexLayout>
+    </Frame>
+    <FlexLayout
+                    Grid.Row="1"
+                    Margin="0"
+                    Padding="20,0"
+                    BackgroundColor="Transparent">
+        <Label
+                        FlexLayout.Grow="1"
+                        FontSize="22"
+                        Text="Trending Restaurants"
+                        TextColor="#222455"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Center" />
+        <Label
+                        xtc:TouchEffect.Command="{Binding TrendingRestCommand}"
+                        FontAttributes="None"
+                        FontSize="16"
+                        Text="See all (45)"
+                        TextColor="#6E7FAA"
+                        VerticalTextAlignment="Center" />
+    </FlexLayout>
+    <CollectionView
+                    Grid.Row="2"
+                    Margin="10,0,0,0"
+                    ItemsLayout="HorizontalList"
+                    ItemsSource="{Binding ListRestaurant}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <template:RestaurantTemplate />
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+    <FlexLayout
+                    Grid.Row="3"
+                    Margin="0"
+                    Padding="20,0"
+                    BackgroundColor="Transparent">
+        <Label
+                        FlexLayout.Grow="1"
+                        FontSize="22"
+                        Text="Category"
+                        TextColor="#222455"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Center" />
+        <Label
+                        FontAttributes="None"
+                        FontSize="16"
+                        Text="See all (11)"
+                        TextColor="#6E7FAA"
+                        VerticalTextAlignment="Center" />
+    </FlexLayout>
+    <CollectionView
+                    Grid.Row="4"
+                    Margin="0"
+                    ItemsLayout="HorizontalList"
+                    ItemsSource="{Binding ListRestaurant}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout
+                                Margin="0,0"
+                                Padding="0"
+                                Orientation="Horizontal">
+                    <Frame
+                                    Margin="10,0"
+                                    Padding="0"
+                                    CornerRadius="20"
+                                    HorizontalOptions="StartAndExpand"
+                                    WidthRequest="170">
+                        <Grid>
+                            <Image Aspect="AspectFill" Source="{Binding .}" />
+                            <BoxView BackgroundColor="Red" Opacity="0.5">
+                                <BoxView.Background>
+                                    <LinearGradientBrush>
+                                        <GradientStop Offset="0.1" Color="Indigo" />
+                                        <GradientStop Offset="1.0" Color="Green" />
+                                    </LinearGradientBrush>
+                                </BoxView.Background>
+                            </BoxView>
+                            <Label
+                                            FontSize="26"
+                                            HorizontalOptions="Center"
+                                            Text="Italian"
+                                            TextColor="White"
+                                            VerticalOptions="Center" />
+                        </Grid>
+                    </Frame>
+
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+    <FlexLayout
+                    Grid.Row="5"
+                    Padding="20,0"
+                    BackgroundColor="Transparent">
+        <Label
+                        FlexLayout.Grow="1"
+                        FontSize="22"
+                        Text="Friends"
+                        TextColor="#222455"
+                        VerticalOptions="FillAndExpand"
+                        VerticalTextAlignment="Center" />
+        <Label
+                        FontAttributes="None"
+                        FontSize="16"
+                        Text="See all (56)"
+                        TextColor="#6E7FAA"
+                        VerticalTextAlignment="Center" />
+    </FlexLayout>
+    <CollectionView
+                    Grid.Row="6"
+                    ItemsLayout="HorizontalList"
+                    ItemsSource="{Binding ListRestaurant}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <FlexLayout
+                                Padding="10,0"
+                                AlignContent="Center"
+                                AlignItems="Center"
+                                JustifyContent="SpaceAround">
+                    <Image
+                                    Margin="1"
+                                    xtc:CornerRadiusEffect.CornerRadius="1000"
+                                    Aspect="AspectFill"
+                                    HeightRequest="60"
+                                    Source="{Binding .}"
+                                    WidthRequest="60" />
+                </FlexLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>-->
+<!--<FlexLayout
+                    Grid.Row="7"
+                    xtc:CornerRadiusEffect.CornerRadius="30"
+                    AlignContent="SpaceEvenly"
+                    AlignItems="Stretch"
+                    BackgroundColor="White">
+                    <ImageButton
+                        Padding="30,0"
+                        BackgroundColor="Transparent"
+                        FlexLayout.Grow="1"
+                        Source="Email_Img" />
+                    <ImageButton
+                        Padding="30,0"
+                        BackgroundColor="Transparent"
+                        FlexLayout.Grow="1"
+                        Source="Email_Img" />
+                    <ImageButton
+                        Padding="30,0"
+                        xtc:CornerRadiusEffect.CornerRadius="1000"
+                        BackgroundColor="Black"
+                        FlexLayout.Grow="1"
+                        HorizontalOptions="CenterAndExpand"
+                        Source="Email_Img"
+                        TranslationY="-30"
+                        VerticalOptions="CenterAndExpand" />
+                    <ImageButton
+                        Padding="30,0"
+                        BackgroundColor="Transparent"
+                        BorderColor="Red"
+                        FlexLayout.Grow="1"
+                        Source="usuario_Img" />
+
+                    <ImageButton
+                        Padding="30,0"
+                        BackgroundColor="Transparent"
+                        FlexLayout.Grow="1"
+                        Source="Email_Img" />
+                </FlexLayout>-->
+<!--
+</Grid>-->

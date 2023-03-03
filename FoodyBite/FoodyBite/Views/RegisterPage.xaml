@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="FoodyBite.Views.RegisterPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:FoodyBite.Controls"
+    xmlns:sharpnado1="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+    xmlns:xtc="http://xamarin.com/schemas/2020/toolkit"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+
+        <Grid>
+            <Image
+                Margin="0,-135,-125,0"
+                Aspect="AspectFill"
+                Source="Register_img" />
+            <Image Aspect="AspectFill" Source="BackGround" />
+            <Grid
+                RowDefinitions="1*,2*,*"
+                RowSpacing="40"
+                VerticalOptions="CenterAndExpand">
+                <sharpnado1:MaterialFrame
+                    CornerRadius="500"
+                    Elevation="4"
+                    HeightRequest="170"
+                    HorizontalOptions="CenterAndExpand"
+                    IsClippedToBounds="False"
+                    LightThemeBackgroundColor="White"
+                    MaterialTheme="AcrylicBlur"
+                    VerticalOptions="StartAndExpand"
+                    WidthRequest="170">
+                    <Grid>
+                        <Image
+                            Aspect="AspectFill"
+                            HorizontalOptions="Center"
+                            Source="usuario_Img"
+                            VerticalOptions="Center" />
+                        <Frame
+                            BackgroundColor="#5663FF"
+                            BorderColor="Lavender"
+                            CornerRadius="1000"
+                            HeightRequest="25"
+                            HorizontalOptions="EndAndExpand"
+                            IsClippedToBounds="True"
+                            TranslationX="40"
+                            TranslationY="10"
+                            VerticalOptions="End"
+                            WidthRequest="25">
+                            <Image Source="Seta_Cima_icon" />
+                        </Frame>
+                    </Grid>
+                </sharpnado1:MaterialFrame>
+
+                <StackLayout
+                    Grid.Row="1"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand">
+                    <controls:EntryView
+                        PlaceHolde="Name"
+                        SourceImage="usuario_Img"
+                        TextEntry="lipiluis" />
+                    <controls:EntryView
+                        PlaceHolde="Email"
+                        SourceImage="Email_Img"
+                        TextEntry="lipiluis0101@gmail.com" />
+                    <controls:EntryView
+                        IsPassEntry="True"
+                        PlaceHolde="Password"
+                        SourceImage="unlock_Img"
+                        TextEntry="lipi010m" />
+                    <controls:EntryView
+                        IsPassEntry="True"
+                        PlaceHolde="Confirm Password"
+                        SourceImage="unlock_Img"
+                        TextEntry="lipi010" />
+
+                </StackLayout>
+                <Grid Grid.Row="2" RowDefinitions="auto,auto">
+                    <Button
+                        Margin="30,40"
+                        BackgroundColor="#5663FF"
+                        CornerRadius="10"
+                        FontSize="20"
+                        HeightRequest="80"
+                        Text="Register"
+                        TextColor="White"
+                        TextTransform="None"
+                        VerticalOptions="EndAndExpand" />
+                    <Label
+                        Grid.Row="1"
+                        FontSize="18"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="EndAndExpand"
+                        VerticalTextAlignment="End">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Already have an account?" TextColor="LightGray" />
+                                <Span
+                                    xtc:TouchEffect.Command="{Binding LoginViewModel}"
+                                    Text="Login"
+                                    TextColor="#5663FF" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+            </Grid>
+            <StackLayout
+                Margin="0,60"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="EndAndExpand">
+
+                <!--<Label
+                    FontSize="18"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="EndAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Already have an account?" TextColor="LightGray" />
+                            <Span
+                                xtc:TouchEffect.Command="{Binding LoginViewModel}"
+                                Text="Login"
+                                TextColor="#5663FF" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>-->
+            </StackLayout>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

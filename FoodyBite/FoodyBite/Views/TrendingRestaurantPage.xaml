@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="FoodyBite.Views.TrendingRestaurantPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:template="clr-namespace:FoodyBite.Views.Template"
+    BackgroundColor="White"
+    NavigationPage.HasNavigationBar="False">
+    <Grid
+        Margin="0"
+        Padding="0"
+        RowDefinitions="110,*">
+        <Grid
+            Margin="10,60,20,0"
+            BackgroundColor="Transparent"
+            ColumnDefinitions="1*,4*"
+            HorizontalOptions="FillAndExpand">
+            <ImageButton
+                Margin="10"
+                BackgroundColor="Transparent"
+                HeightRequest="45"
+                HorizontalOptions="StartAndExpand"
+                Source="Back_Icon"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="35" />
+
+            <Label
+                Grid.ColumnSpan="2"
+                Margin="25,0"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                Text="Find Restaurants"
+                TextColor="#6E7FAA"
+                VerticalTextAlignment="Center" />
+        </Grid>
+
+        <CollectionView
+            Grid.Row="1"
+            Margin="13"
+            Header="{Binding .}"
+            HorizontalOptions="FillAndExpand"
+            ItemsSource="{Binding ListRestaurant}">
+            <CollectionView.HeaderTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10,0">
+                        <Frame
+                            BackgroundColor="Transparent"
+                            BorderColor="WhiteSmoke"
+                            CornerRadius="10"
+                            HeightRequest="40">
+                            <FlexLayout JustifyContent="SpaceEvenly">
+                                <ImageButton
+                                    Aspect="AspectFit"
+                                    BackgroundColor="Transparent"
+                                    FlexLayout.AlignSelf="Center"
+                                    FlexLayout.Grow="0"
+                                    HeightRequest="30"
+                                    Source="Search_Icon"
+                                    WidthRequest="30" />
+                                <Entry
+                                    Grid.Column="1"
+                                    Margin="25,0"
+                                    FlexLayout.Grow="1"
+                                    FontSize="18"
+                                    HorizontalTextAlignment="Start"
+                                    Placeholder="Find Restaurants"
+                                    TextColor="#6E7FAA"
+                                    VerticalTextAlignment="Center" />
+                                <ImageButton
+                                    Grid.Column="2"
+                                    Aspect="AspectFit"
+                                    BackgroundColor="Transparent"
+                                    FlexLayout.AlignSelf="Center"
+                                    HeightRequest="30"
+                                    Source="Filter_Icon"
+                                    WidthRequest="30" />
+                            </FlexLayout>
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.HeaderTemplate>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <template:RestaurantTemplate />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="FoodyBite.Views.SetLocationPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Image Aspect="AspectFill" Source="Start_Img" />
+            <Image Aspect="AspectFill" Source="BackGround" />
+            <StackLayout>
+                <Label
+                    Margin="40,0"
+                    BackgroundColor="Black"
+                    FontAttributes="Bold, Italic"
+                    FontFamily="Josefin Sans"
+                    FontSize="43"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Hi John," />
+                            <Span Text="&#10;" />
+                            <Span Text="Welcome to" />
+                            <Span Text="&#10;" />
+                            <Span Text="Foodybite" TextColor="#FFCC00" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label
+                    Margin="40,0"
+                    FontAttributes="Bold, Italic"
+                    FontFamily="Josefin Sans"
+                    FontSize="43"
+                    TextColor="White"
+                    VerticalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Hi John," />
+                            <Span Text="&#10;" />
+                            <Span Text="Welcome to" />
+                            <Span Text="&#10;" />
+                            <Span Text="Foodybite" TextColor="#FFCC00" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

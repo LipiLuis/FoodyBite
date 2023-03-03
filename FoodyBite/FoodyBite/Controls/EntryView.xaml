@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    x:Class="FoodyBite.Controls.EntryView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sharpnado1="clr-namespace:Sharpnado.MaterialFrame;assembly=Sharpnado.MaterialFrame"
+    x:Name="this">
+    <sharpnado1:MaterialFrame
+        Margin="30,10"
+        Padding="0"
+        AcrylicGlowColor="White"
+        CornerRadius="10"
+        Style="{x:StaticResource AcrylicFrame}">
+        <Grid ColumnDefinitions="1*,4*">
+            <Image
+                x:Name="sourceImage"
+                Aspect="AspectFill"
+                HeightRequest="35"
+                HorizontalOptions="CenterAndExpand"
+                Source="{Binding Source={x:Reference this}, Path=SourceImage}"
+                VerticalOptions="CenterAndExpand"
+                WidthRequest="35" />
+            <Entry
+                x:Name="textEntry"
+                Grid.Column="1"
+                Margin="-10,5"
+                FontAttributes="Bold"
+                FontSize="22"
+                HeightRequest="70"
+                IsPassword="{Binding Source={x:Reference this}, Path=IsPassEntry}"
+                Placeholder="{Binding Source={x:Reference this}, Path=PlaceHolde}"
+                PlaceholderColor="White"
+                Text="{Binding Source={x:Reference this}, Path=TextEntry}"
+                TextColor="White" />
+        </Grid>
+    </sharpnado1:MaterialFrame>
+</ContentView>
